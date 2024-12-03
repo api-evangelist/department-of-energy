@@ -1,0 +1,38 @@
+aid: department-of-energy
+name: Department of Energy
+description: >-
+  The Department of Energy has developed a large repository of anonymous,
+  empirical records and encourages the market to provide new and innovative ways
+  to utilize the data. Accessing the API. The API is currently free and
+  available in beta form. In the future, there may be a fee associated with the
+  use of the API.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - API
+created: '2024-12-03'
+modified: '2024-12-03'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/department-of-energy/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: department-of-energy:department-of-energy
+    name: Department of Energy
+    description: >-
+      The Department of Energy has developed a large repository of anonymous,
+      empirical records and encourages the market to provide new and innovative
+      ways to utilize the data. Accessing the API. The API is currently free and
+      available in beta form. In the future, there may be a fee associated with
+      the use of the API.
+    humanURL: https://www.energy.gov/eere/buildings/application-programming-interface
+    tags:
+      - API
+    properties:
+      - type: Documentation
+        url: >-
+          https://www.energy.gov/eere/buildings/application-programming-interface
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
