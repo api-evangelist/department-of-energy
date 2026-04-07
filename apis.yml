@@ -4,8 +4,7 @@ url: >-
 apis:
   - aid: department-of-energy:department-of-energy
     name: Department of Energy
-    tags:
-      - API
+    tags: []
     humanURL: https://www.energy.gov/eere/buildings/application-programming-interface
     properties:
       - url: >-
@@ -19,8 +18,8 @@ apis:
       the use of the API.
 name: Department of Energy
 tags:
-  - Federal Government
   - Energy
+  - Federal Government
 type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
