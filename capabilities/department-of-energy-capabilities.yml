@@ -1,0 +1,47 @@
+name: Department of Energy Capabilities
+description: >-
+  Capabilities exposed by DOE public APIs and data assets across EIA, OSTI,
+  NREL/NLR, BPD, and the DOE Open Data Catalog.
+capabilities:
+  - name: Energy Statistics Series
+    description: Retrieve time-series statistics across petroleum, gas, coal, electricity, and renewables.
+    api: department-of-energy:eia-api
+  - name: Geographic Filtering
+    description: Filter EIA series by region, state, country, or sector.
+    api: department-of-energy:eia-api
+  - name: Faceted Browsing
+    description: Browse EIA datasets via hierarchical facets in the API browser.
+    api: department-of-energy:eia-api
+  - name: API Key Issuance
+    description: Issue and rate-limit free API keys for the EIA and NREL/NLR APIs.
+    api: department-of-energy:eia-api
+  - name: Research Search
+    description: Search DOE-funded research articles and manuscripts via the PAGES API.
+    api: department-of-energy:osti-pages-api
+  - name: Bibliographic Retrieval
+    description: Retrieve metadata, abstracts, and full-text links for OSTI records.
+    api: department-of-energy:osti-pages-api
+  - name: Research Submission
+    description: Submit DOE-funded research metadata and full text via ELINK.
+    api: department-of-energy:osti-elink-api
+  - name: Solar Resource Data
+    description: Get solar irradiance and PV-relevant data for a location.
+    api: department-of-energy:nrel-developer-api
+  - name: Alternative Fuel Stations
+    description: Locate EV chargers, hydrogen, biodiesel, and other alternative fuel stations.
+    api: department-of-energy:nrel-developer-api
+  - name: Utility Rates
+    description: Look up commercial, residential, and industrial utility rates by location.
+    api: department-of-energy:nrel-developer-api
+  - name: Geothermal and Wind Resource
+    description: Access geothermal, wind, and biomass resource estimates.
+    api: department-of-energy:nrel-developer-api
+  - name: Buildings Benchmarking
+    description: Compare buildings against anonymized BPD cohorts.
+    api: department-of-energy:buildings-performance-database
+  - name: Dataset Discovery
+    description: Search and discover DOE datasets on Data.gov.
+    api: department-of-energy:open-data-catalog
+  - name: Dataset Download
+    description: Retrieve dataset resources via the Data.gov CKAN API.
+    api: department-of-energy:open-data-catalog

@@ -1,42 +1,70 @@
 # Department of Energy (department-of-energy)
-The Department of Energy has developed a large repository of anonymous, empirical records and encourages the market to provide new and innovative ways to utilize the data. Accessing the API. The API is currently free and available in beta form. In the future, there may be a fee associated with the use of the API.
+The U.S. Department of Energy (DOE) provides extensive open data and APIs across its national laboratories and program offices. Notable APIs are published by the Energy Information Administration (EIA) for energy statistics, the Office of Scientific and Technical Information (OSTI) for research and publications, the National Renewable Energy Laboratory (NREL/NLR) developer network for renewables and alternative fuels, and the Buildings Performance Database (BPD).
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/department-of-energy/refs/heads/main/apis.yml)
+**URL:** [Visit APIs.yml URL](https://raw.githubusercontent.com/api-evangelist/department-of-energy/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Contract 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+- **Type:** Index
+- **Position:** Producer
+- **Access:** Public
+- **xType:** government
 
-## Tags:
+## Tags
 
- - Federal Government, Energy
+- Buildings, Electricity, Energy, Federal Government, Open Data, Renewables, Research, Solar, Statistics
 
 ## Timestamps
 
-- **Created:** 2024-12-03 
-- **Modified:** 2024-12-22 
+- **Created:** 2024-12-03
+- **Modified:** 2026-04-28
 
 ## APIs
 
-### Department of Energy
-The Department of Energy has developed a large repository of anonymous, empirical records and encourages the market to provide new and innovative ways to utilize the data. Accessing the API. The API is currently free and available in beta form. In the future, there may be a fee associated with the use of the API.
+### EIA Open Data API V2
+Fully RESTful API for U.S. energy statistics across petroleum, gas, coal, electricity, nuclear, renewables, and more.
 
-**Human URL:** [https://www.energy.gov/eere/buildings/application-programming-interface](https://www.energy.gov/eere/buildings/application-programming-interface)
+**Human URL:** [EIA Open Data](https://www.eia.gov/opendata/)
 
+### OSTI DOE PAGES API
+Programmatic access to DOE-funded research articles and accepted manuscripts.
 
-#### Tags:
+**Human URL:** [OSTI PAGES API](https://www.osti.gov/pages/api/v1/docs)
 
- - API
+### OSTI ELINK API
+Submission and metadata interface for DOE-funded research output.
 
-#### Properties
+**Human URL:** [OSTI ELINK](https://www.osti.gov/elink/)
 
-- [Documentation](https://www.energy.gov/eere/buildings/application-programming-interface)
+### NREL/NLR Developer Network APIs
+Solar, alternative fuels, electricity, transportation, and economics APIs.
+
+**Human URL:** [NLR Developer Network](https://developer.nlr.gov/)
+
+### Buildings Performance Database API
+Anonymized empirical performance records for commercial and residential buildings.
+
+**Human URL:** [BPD](https://www.energy.gov/eere/buildings/application-programming-interface)
+
+### Department of Energy Open Data Catalog
+DOE datasets published on Data.gov via CKAN.
+
+**Human URL:** [DOE on Data.gov](https://catalog.data.gov/organization/doe-gov)
+
+## Common Properties
+
+- [Website](https://www.energy.gov)
+- [Open Energy Data](https://www.energy.gov/data/open-energy-data)
+- [EIA](https://www.eia.gov)
+- [OSTI](https://www.osti.gov)
+- [NREL Developer](https://developer.nlr.gov/)
+- [Energy Data eXchange](https://edx.netl.doe.gov/)
+- [Data.gov DOE](https://catalog.data.gov/organization/doe-gov)
+- [JSON-LD](json-ld/department-of-energy-context.jsonld)
+- [Vocabulary](vocabulary/department-of-energy-vocabulary.yml)
+- [Capabilities](capabilities/department-of-energy-capabilities.yml)
 
 ## Maintainers
 
-**FN:** Kin Lane
-
-**Email:** info@apievangelist.com
-
+- **FN:** Kin Lane
+- **Email:** kin@apievangelist.com

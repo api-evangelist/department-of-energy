@@ -1,0 +1,64 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "doe": "https://www.energy.gov/",
+    "Series": {
+      "@id": "doe:eia/series",
+      "@context": {
+        "id": "https://schema.org/identifier",
+        "name": "https://schema.org/name",
+        "frequency": "https://schema.org/temporalCoverage",
+        "units": "https://schema.org/unitText"
+      }
+    },
+    "Observation": {
+      "@id": "doe:eia/observation",
+      "@context": {
+        "period": "https://schema.org/temporalCoverage",
+        "value": "https://schema.org/value",
+        "series": "https://schema.org/about"
+      }
+    },
+    "Publication": {
+      "@id": "https://schema.org/ScholarlyArticle",
+      "@context": {
+        "osti_id": "https://schema.org/identifier",
+        "title": "https://schema.org/name",
+        "authors": "https://schema.org/author",
+        "publicationDate": "https://schema.org/datePublished",
+        "doi": "https://schema.org/sameAs"
+      }
+    },
+    "Station": {
+      "@id": "doe:nrel/station",
+      "@context": {
+        "id": "https://schema.org/identifier",
+        "name": "https://schema.org/name",
+        "fuelType": "https://schema.org/fuelType",
+        "address": "https://schema.org/address",
+        "latitude": "https://schema.org/latitude",
+        "longitude": "https://schema.org/longitude"
+      }
+    },
+    "Building": {
+      "@id": "doe:bpd/building",
+      "@context": {
+        "id": "https://schema.org/identifier",
+        "type": "https://schema.org/buildingType",
+        "vintage": "https://schema.org/yearBuilt",
+        "climateZone": "https://schema.org/climateContent",
+        "eui": "https://schema.org/value"
+      }
+    },
+    "Dataset": {
+      "@id": "https://schema.org/Dataset",
+      "@context": {
+        "id": "https://schema.org/identifier",
+        "title": "https://schema.org/name",
+        "description": "https://schema.org/description",
+        "publisher": "https://schema.org/publisher",
+        "license": "https://schema.org/license"
+      }
+    }
+  }
+}

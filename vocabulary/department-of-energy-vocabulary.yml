@@ -1,0 +1,73 @@
+name: Department of Energy Vocabulary
+description: >-
+  Shared vocabulary of terms used across DOE public APIs and data assets,
+  including the EIA Open Data API, OSTI services, the NREL/NLR Developer
+  Network, and the Buildings Performance Database.
+terms:
+  - term: EIA
+    definition: >-
+      The U.S. Energy Information Administration, an agency within DOE that
+      collects, analyzes, and disseminates independent energy statistics.
+  - term: Series
+    definition: >-
+      A named time-series of observations published by EIA, identified by a
+      stable series ID and a publication frequency.
+  - term: Observation
+    definition: >-
+      A single time-period value within an EIA series.
+  - term: Frequency
+    definition: >-
+      The temporal granularity of a series such as annual, monthly, weekly,
+      daily, or hourly.
+  - term: API Key
+    definition: >-
+      A unique credential issued by api.data.gov or eia.gov that authenticates
+      requests to DOE public APIs.
+  - term: OSTI
+    definition: >-
+      The Office of Scientific and Technical Information, the DOE office that
+      manages public access to DOE-funded research output.
+  - term: DOE PAGES
+    definition: >-
+      The Public Access Gateway for Energy and Science, OSTI's repository of
+      DOE-funded research articles and accepted manuscripts.
+  - term: ELINK
+    definition: >-
+      OSTI's submission and metadata interface used by DOE-funded
+      organizations to deposit research output.
+  - term: NREL/NLR
+    definition: >-
+      The National Renewable Energy Laboratory (rebranding to National
+      Laboratory of the Rockies), a DOE national lab that publishes the
+      Developer Network of energy APIs.
+  - term: Solar Resource API
+    definition: >-
+      An NREL API that returns solar irradiance and photovoltaic-relevant data
+      for a location.
+  - term: Alternative Fuel Stations API
+    definition: >-
+      An NREL API that returns the locations and attributes of EV charging,
+      hydrogen, biodiesel, and other alternative fuel stations.
+  - term: Utility Rates API
+    definition: >-
+      An NREL API that returns electric utility rate data by location.
+  - term: Buildings Performance Database (BPD)
+    definition: >-
+      A DOE database of anonymized empirical performance records for
+      commercial and residential buildings.
+  - term: Energy Use Intensity (EUI)
+    definition: >-
+      Energy consumption per unit floor area, used as a benchmarking metric
+      for buildings.
+  - term: Open Energy Data Initiative (OEDI)
+    definition: >-
+      A DOE program implemented by NREL to make energy datasets discoverable
+      and actionable across the agency.
+  - term: Energy Data eXchange (EDX)
+    definition: >-
+      An NETL-hosted online catalog and collaboration platform for fossil
+      energy and unconventional resource data.
+  - term: Dataset
+    definition: >-
+      A collection of related data files published on data.gov or an agency
+      catalog with metadata and documentation.
