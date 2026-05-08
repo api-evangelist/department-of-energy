@@ -60,6 +60,8 @@ apis:
         url: https://www.eia.gov/opendata/register.php
       - type: Reference PDF
         url: https://www.eia.gov/opendata/documentation/APIv2.1.0.pdf
+      - type: OpenAPI
+        url: openapi/department-of-energy-openapi.yml
     contact:
       - FN: EIA Customer Support
         email: InfoCtr@eia.gov
