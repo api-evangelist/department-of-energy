@@ -25,7 +25,7 @@ url: >-
 created: '2024-12-03'
 modified: '2026-04-28'
 specificationVersion: '0.19'
-xType: government
+kind: government
 position: Producer
 access: Public
 apis:
@@ -56,7 +56,7 @@ apis:
         url: https://www.eia.gov/developer/
       - type: API Browser
         url: https://www.eia.gov/opendata/browser/
-      - type: Sign Up
+      - type: SignUp
         url: https://www.eia.gov/opendata/register.php
       - type: Reference PDF
         url: https://www.eia.gov/opendata/documentation/APIv2.1.0.pdf
@@ -146,7 +146,7 @@ apis:
         url: https://developer.nlr.gov/docs/solar/
       - type: Electricity APIs
         url: https://developer.nlr.gov/docs/electricity/
-      - type: Sign Up
+      - type: SignUp
         url: https://api.data.gov/signup/
       - type: Data Catalog
         url: https://data.nlr.gov/
@@ -220,11 +220,11 @@ common:
     url: https://catalog.data.gov/organization/doe-gov
   - type: News
     url: https://www.energy.gov/news
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.energy.gov/privacy
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/doe-doe
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/department-of-energy-context.jsonld
   - type: Vocabulary
     url: vocabulary/department-of-energy-vocabulary.yml
