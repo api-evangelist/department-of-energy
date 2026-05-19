@@ -1,0 +1,497 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: EIA Open Data API V2
+  description: 'EIA Open Data API V2. 14 operations. Lead operation: API root. Self-contained Naftiko capability covering
+    one Department Of Energy business surface.'
+  tags:
+  - Department Of Energy
+  - EIA Open Data API V2
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    DEPARTMENT_OF_ENERGY_API_KEY: DEPARTMENT_OF_ENERGY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: department-of-energy
+    baseUri: https://api.eia.gov/v2
+    description: EIA Open Data API V2 business capability. Self-contained, no shared references.
+    resources:
+    - name: root
+      path: /
+      operations:
+      - name: getroot
+        method: GET
+        description: API root
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: aeo
+      path: /aeo
+      operations:
+      - name: getaeo
+        method: GET
+        description: Annual Energy Outlook metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: co2-emissions
+      path: /co2-emissions
+      operations:
+      - name: getco2emissions
+        method: GET
+        description: Energy-related CO2 emissions metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: coal
+      path: /coal
+      operations:
+      - name: getcoal
+        method: GET
+        description: Coal dataset metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: electricity
+      path: /electricity
+      operations:
+      - name: getelectricity
+        method: GET
+        description: Electricity dataset metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: electricity-retail-sales-data
+      path: /electricity/retail-sales/data
+      operations:
+      - name: getelectricityretailsalesdata
+        method: GET
+        description: Electricity retail sales data
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: international
+      path: /international
+      operations:
+      - name: getinternational
+        method: GET
+        description: International dataset metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: natural-gas
+      path: /natural-gas
+      operations:
+      - name: getnaturalgas
+        method: GET
+        description: Natural gas dataset metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: nuclear-outages
+      path: /nuclear-outages
+      operations:
+      - name: getnuclearoutages
+        method: GET
+        description: Nuclear outages dataset metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: petroleum
+      path: /petroleum
+      operations:
+      - name: getpetroleum
+        method: GET
+        description: Petroleum dataset metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: seds
+      path: /seds
+      operations:
+      - name: getseds
+        method: GET
+        description: State Energy Data System metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: seriesid-seriesId
+      path: /seriesid/{seriesId}
+      operations:
+      - name: getseriesbyid
+        method: GET
+        description: Legacy series ID lookup
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: seriesId
+          in: path
+          type: string
+          required: true
+    - name: steo
+      path: /steo
+      operations:
+      - name: getsteo
+        method: GET
+        description: Short-Term Energy Outlook metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: total-energy
+      path: /total-energy
+      operations:
+      - name: gettotalenergy
+        method: GET
+        description: Total energy dataset metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: apikey
+      key: api_key
+      value: '{{env.DEPARTMENT_OF_ENERGY_API_KEY}}'
+      placement: query
+  exposes:
+  - type: rest
+    namespace: department-of-energy-rest
+    port: 8080
+    description: REST adapter for EIA Open Data API V2. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1
+      name: root
+      description: REST surface for root.
+      operations:
+      - method: GET
+        name: getroot
+        description: API root
+        call: department-of-energy.getroot
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/aeo
+      name: aeo
+      description: REST surface for aeo.
+      operations:
+      - method: GET
+        name: getaeo
+        description: Annual Energy Outlook metadata
+        call: department-of-energy.getaeo
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/co2-emissions
+      name: co2-emissions
+      description: REST surface for co2-emissions.
+      operations:
+      - method: GET
+        name: getco2emissions
+        description: Energy-related CO2 emissions metadata
+        call: department-of-energy.getco2emissions
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/coal
+      name: coal
+      description: REST surface for coal.
+      operations:
+      - method: GET
+        name: getcoal
+        description: Coal dataset metadata
+        call: department-of-energy.getcoal
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/electricity
+      name: electricity
+      description: REST surface for electricity.
+      operations:
+      - method: GET
+        name: getelectricity
+        description: Electricity dataset metadata
+        call: department-of-energy.getelectricity
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/electricity/retail-sales/data
+      name: electricity-retail-sales-data
+      description: REST surface for electricity-retail-sales-data.
+      operations:
+      - method: GET
+        name: getelectricityretailsalesdata
+        description: Electricity retail sales data
+        call: department-of-energy.getelectricityretailsalesdata
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/international
+      name: international
+      description: REST surface for international.
+      operations:
+      - method: GET
+        name: getinternational
+        description: International dataset metadata
+        call: department-of-energy.getinternational
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/natural-gas
+      name: natural-gas
+      description: REST surface for natural-gas.
+      operations:
+      - method: GET
+        name: getnaturalgas
+        description: Natural gas dataset metadata
+        call: department-of-energy.getnaturalgas
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/nuclear-outages
+      name: nuclear-outages
+      description: REST surface for nuclear-outages.
+      operations:
+      - method: GET
+        name: getnuclearoutages
+        description: Nuclear outages dataset metadata
+        call: department-of-energy.getnuclearoutages
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/petroleum
+      name: petroleum
+      description: REST surface for petroleum.
+      operations:
+      - method: GET
+        name: getpetroleum
+        description: Petroleum dataset metadata
+        call: department-of-energy.getpetroleum
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/seds
+      name: seds
+      description: REST surface for seds.
+      operations:
+      - method: GET
+        name: getseds
+        description: State Energy Data System metadata
+        call: department-of-energy.getseds
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/seriesid/{seriesid}
+      name: seriesid-seriesid
+      description: REST surface for seriesid-seriesId.
+      operations:
+      - method: GET
+        name: getseriesbyid
+        description: Legacy series ID lookup
+        call: department-of-energy.getseriesbyid
+        with:
+          seriesId: rest.seriesId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/steo
+      name: steo
+      description: REST surface for steo.
+      operations:
+      - method: GET
+        name: getsteo
+        description: Short-Term Energy Outlook metadata
+        call: department-of-energy.getsteo
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/total-energy
+      name: total-energy
+      description: REST surface for total-energy.
+      operations:
+      - method: GET
+        name: gettotalenergy
+        description: Total energy dataset metadata
+        call: department-of-energy.gettotalenergy
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: department-of-energy-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for EIA Open Data API V2. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: api-root
+      description: API root
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getroot
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: annual-energy-outlook-metadata
+      description: Annual Energy Outlook metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getaeo
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: energy-related-co2-emissions-metadata
+      description: Energy-related CO2 emissions metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getco2emissions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: coal-dataset-metadata
+      description: Coal dataset metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getcoal
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: electricity-dataset-metadata
+      description: Electricity dataset metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getelectricity
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: electricity-retail-sales-data
+      description: Electricity retail sales data
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getelectricityretailsalesdata
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: international-dataset-metadata
+      description: International dataset metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getinternational
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: natural-gas-dataset-metadata
+      description: Natural gas dataset metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getnaturalgas
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: nuclear-outages-dataset-metadata
+      description: Nuclear outages dataset metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getnuclearoutages
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: petroleum-dataset-metadata
+      description: Petroleum dataset metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getpetroleum
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: state-energy-data-system-metadata
+      description: State Energy Data System metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getseds
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: legacy-series-id-lookup
+      description: Legacy series ID lookup
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getseriesbyid
+      with:
+        seriesId: tools.seriesId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: short-term-energy-outlook-metadata
+      description: Short-Term Energy Outlook metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.getsteo
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: total-energy-dataset-metadata
+      description: Total energy dataset metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: department-of-energy.gettotalenergy
+      outputParameters:
+      - type: object
+        mapping: $.
