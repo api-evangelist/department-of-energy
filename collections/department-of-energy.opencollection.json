@@ -1,0 +1,319 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "EIA Open Data API V2",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "API root",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          }
+        ]
+      },
+      "docs": "Returns metadata about the available top-level routes."
+    },
+    {
+      "info": {
+        "name": "Electricity dataset metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/electricity",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          }
+        ]
+      },
+      "docs": "Returns metadata for electricity sub-routes."
+    },
+    {
+      "info": {
+        "name": "Electricity retail sales data",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/electricity/retail-sales/data",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          },
+          {
+            "name": "frequency",
+            "value": "",
+            "type": "query",
+            "description": "Period frequency (e.g., monthly, quarterly, annual)."
+          },
+          {
+            "name": "start",
+            "value": "",
+            "type": "query",
+            "description": "Period start (inclusive)."
+          },
+          {
+            "name": "end",
+            "value": "",
+            "type": "query",
+            "description": "Period end (inclusive)."
+          },
+          {
+            "name": "offset",
+            "value": "",
+            "type": "query",
+            "description": "Pagination offset."
+          },
+          {
+            "name": "length",
+            "value": "",
+            "type": "query",
+            "description": "Maximum rows to return."
+          }
+        ]
+      },
+      "docs": "Returns electricity retail sales data points."
+    },
+    {
+      "info": {
+        "name": "Petroleum dataset metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/petroleum",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          }
+        ]
+      },
+      "docs": "Returns metadata for petroleum sub-routes."
+    },
+    {
+      "info": {
+        "name": "Natural gas dataset metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/natural-gas",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          }
+        ]
+      },
+      "docs": "Returns metadata for natural gas sub-routes."
+    },
+    {
+      "info": {
+        "name": "Coal dataset metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/coal",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          }
+        ]
+      },
+      "docs": "Returns metadata for coal sub-routes."
+    },
+    {
+      "info": {
+        "name": "Nuclear outages dataset metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/nuclear-outages",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          }
+        ]
+      },
+      "docs": "Returns metadata for nuclear outage sub-routes."
+    },
+    {
+      "info": {
+        "name": "Total energy dataset metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/total-energy",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          }
+        ]
+      },
+      "docs": "Returns metadata for total energy sub-routes."
+    },
+    {
+      "info": {
+        "name": "International dataset metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/international",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          }
+        ]
+      },
+      "docs": "Returns metadata for international sub-routes."
+    },
+    {
+      "info": {
+        "name": "State Energy Data System metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/seds",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          }
+        ]
+      },
+      "docs": "Returns metadata for SEDS sub-routes."
+    },
+    {
+      "info": {
+        "name": "Short-Term Energy Outlook metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/steo",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          }
+        ]
+      },
+      "docs": "Returns metadata for STEO sub-routes."
+    },
+    {
+      "info": {
+        "name": "Annual Energy Outlook metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/aeo",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          }
+        ]
+      },
+      "docs": "Returns metadata for AEO sub-routes."
+    },
+    {
+      "info": {
+        "name": "Energy-related CO2 emissions metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/co2-emissions",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          }
+        ]
+      },
+      "docs": "Returns metadata for CO2 emissions sub-routes."
+    },
+    {
+      "info": {
+        "name": "Legacy series ID lookup",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.eia.gov/v2/seriesid/:seriesId",
+        "params": [
+          {
+            "name": "api_key",
+            "value": "",
+            "type": "query",
+            "description": "EIA Open Data API key."
+          },
+          {
+            "name": "seriesId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Returns data for a legacy APIv1 series identifier."
+    }
+  ],
+  "bundled": true
+}
