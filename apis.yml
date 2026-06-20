@@ -7,7 +7,7 @@ description: >-
   (NREL, rebranding as NLR) developer network for renewables and alternative fuels, and the Buildings Performance
   Database (BPD).
 type: Index
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Buildings
   - Electricity
@@ -33,7 +33,7 @@ apis:
       public energy statistics. Routes are arranged in a logical hierarchy across petroleum, natural gas, coal,
       electricity, nuclear, renewables, total energy, international, and consumption series. Requests require a free
       api_key obtained from the EIA Open Data portal and return up to 5,000 rows per request as JSON or XML.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.eia.gov/opendata/
     baseURL: https://api.eia.gov/v2
     tags:
@@ -67,7 +67,7 @@ apis:
       resulting from DOE-funded research, hosted by the Office of Scientific and Technical Information (OSTI). The API
       supports search and retrieval of bibliographic records and full-text links for journal articles, accepted
       manuscripts, and technical reports.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.osti.gov/pages/api/v1/docs
     baseURL: https://www.osti.gov/pages/api/v1
     tags:
@@ -90,7 +90,7 @@ apis:
       The OSTI ELINK API is the Office of Scientific and Technical Information's submission and retrieval interface for
       DOE research records. It supports submission of metadata and full text by DOE-funded research organizations, and
       it powers public retrieval interfaces for OSTI.GOV.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.osti.gov/elink/
     baseURL: https://www.osti.gov/elink
     tags:
@@ -114,7 +114,7 @@ apis:
       REST APIs covering solar resource and PV simulation, alternative fuels and stations, electricity utilities and
       rates, transportation, geothermal, and energy economics. All APIs share a common API key model issued through
       api.data.gov. Existing developer.nrel.gov consumers must migrate to developer.nlr.gov by April 30, 2026.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.nlr.gov/
     baseURL: https://developer.nlr.gov/api
     tags:
@@ -146,7 +146,7 @@ apis:
       The Buildings Performance Database (BPD) is a DOE repository of anonymized empirical performance records for
       commercial and residential buildings. The BPD API allows partners to query aggregate distributions and compare
       cohorts of buildings across attributes such as building type, vintage, climate zone, and energy use intensity.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.energy.gov/eere/buildings/application-programming-interface
     baseURL: https://api.example.com
     tags:
@@ -166,7 +166,7 @@ apis:
       The DOE participates in Data.gov by publishing thousands of dataset records under the doe-gov organization. These
       datasets cover energy consumption, generation, environmental impact, R&D, and more, and are accessible through
       Data.gov's CKAN-compatible API.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://catalog.data.gov/organization/doe-gov
     baseURL: https://catalog.data.gov/api/3
     tags:
