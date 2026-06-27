@@ -50,7 +50,7 @@ apis:
         url: https://www.eia.gov/developer/
       - type: API Browser
         url: https://www.eia.gov/opendata/browser/
-      - type: SignUp
+      - type: Signup
         url: https://www.eia.gov/opendata/register.php
       - type: Reference PDF
         url: https://www.eia.gov/opendata/documentation/APIv2.1.0.pdf
@@ -133,7 +133,7 @@ apis:
         url: https://developer.nlr.gov/docs/solar/
       - type: Electricity APIs
         url: https://developer.nlr.gov/docs/electricity/
-      - type: SignUp
+      - type: Signup
         url: https://api.data.gov/signup/
       - type: Data Catalog
         url: https://data.nlr.gov/
@@ -190,7 +190,7 @@ common:
     url: https://www.energy.gov
   - type: Open Energy Data
     url: https://www.energy.gov/data/open-energy-data
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://api.data.gov/
   - type: EIA
     url: https://www.eia.gov
