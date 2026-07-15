@@ -184,6 +184,8 @@ apis:
       - FN: DOE Open Data
         url: https://www.energy.gov/data/open-energy-data
 common:
+  - type: AgenticAccess
+    url: agentic-access/department-of-energy-agentic-access.yml
   - type: DomainSecurity
     url: security/department-of-energy-domain-security.yml
   - type: Authentication
