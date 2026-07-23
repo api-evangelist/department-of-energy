@@ -1,0 +1,71 @@
+openapi: 3.1.0
+info:
+  title: EIA Open Data API V2 Aeo Seriesid API
+  description: The U.S. Energy Information Administration (EIA) Open Data API v2 is a fully RESTful implementation of EIA's public energy statistics. Routes are arranged in a logical hierarchy across petroleum, natural gas, coal, electricity, nuclear, renewables, total energy, international, and consumption series.
+  version: '2.0'
+servers:
+- url: https://api.eia.gov/v2
+  description: EIA Open Data API v2
+security:
+- apiKeyQuery: []
+tags:
+- name: Seriesid
+paths:
+  /seriesid/{seriesId}:
+    get:
+      summary: Legacy series ID lookup
+      description: Returns data for a legacy APIv1 series identifier.
+      operationId: getSeriesById
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - name: seriesId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataResponse'
+      tags:
+      - Seriesid
+components:
+  parameters:
+    ApiKey:
+      name: api_key
+      in: query
+      required: true
+      schema:
+        type: string
+      description: EIA Open Data API key.
+  schemas:
+    DataResponse:
+      type: object
+      additionalProperties: true
+      properties:
+        response:
+          type: object
+          additionalProperties: true
+          properties:
+            total:
+              type: integer
+            data:
+              type: array
+              items:
+                type: object
+                additionalProperties: true
+        request:
+          type: object
+          additionalProperties: true
+        apiVersion:
+          type: string
+  securitySchemes:
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+x-generated-from: https://www.eia.gov/opendata/documentation.php
+x-generated-by: claude-crawl-2026-05-08

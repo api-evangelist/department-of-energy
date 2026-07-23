@@ -1,0 +1,58 @@
+openapi: 3.1.0
+info:
+  title: EIA Open Data API V2 Aeo Co2 Emissions API
+  description: The U.S. Energy Information Administration (EIA) Open Data API v2 is a fully RESTful implementation of EIA's public energy statistics. Routes are arranged in a logical hierarchy across petroleum, natural gas, coal, electricity, nuclear, renewables, total energy, international, and consumption series.
+  version: '2.0'
+servers:
+- url: https://api.eia.gov/v2
+  description: EIA Open Data API v2
+security:
+- apiKeyQuery: []
+tags:
+- name: Co2 Emissions
+paths:
+  /co2-emissions:
+    get:
+      summary: Energy-related CO2 emissions metadata
+      description: Returns metadata for CO2 emissions sub-routes.
+      operationId: getCo2Emissions
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+      tags:
+      - Co2 Emissions
+components:
+  schemas:
+    RouteResponse:
+      type: object
+      additionalProperties: true
+      properties:
+        response:
+          type: object
+          additionalProperties: true
+        request:
+          type: object
+          additionalProperties: true
+        apiVersion:
+          type: string
+  parameters:
+    ApiKey:
+      name: api_key
+      in: query
+      required: true
+      schema:
+        type: string
+      description: EIA Open Data API key.
+  securitySchemes:
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+x-generated-from: https://www.eia.gov/opendata/documentation.php
+x-generated-by: claude-crawl-2026-05-08

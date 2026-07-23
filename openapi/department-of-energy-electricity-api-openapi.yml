@@ -1,0 +1,129 @@
+openapi: 3.1.0
+info:
+  title: EIA Open Data API V2 Aeo Electricity API
+  description: The U.S. Energy Information Administration (EIA) Open Data API v2 is a fully RESTful implementation of EIA's public energy statistics. Routes are arranged in a logical hierarchy across petroleum, natural gas, coal, electricity, nuclear, renewables, total energy, international, and consumption series.
+  version: '2.0'
+servers:
+- url: https://api.eia.gov/v2
+  description: EIA Open Data API v2
+security:
+- apiKeyQuery: []
+tags:
+- name: Electricity
+paths:
+  /electricity:
+    get:
+      summary: Electricity dataset metadata
+      description: Returns metadata for electricity sub-routes.
+      operationId: getElectricity
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+      tags:
+      - Electricity
+  /electricity/retail-sales/data:
+    get:
+      summary: Electricity retail sales data
+      description: Returns electricity retail sales data points.
+      operationId: getElectricityRetailSalesData
+      parameters:
+      - $ref: '#/components/parameters/ApiKey'
+      - $ref: '#/components/parameters/Frequency'
+      - $ref: '#/components/parameters/Start'
+      - $ref: '#/components/parameters/End'
+      - $ref: '#/components/parameters/Offset'
+      - $ref: '#/components/parameters/Length'
+      responses:
+        '200':
+          description: Successful data response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataResponse'
+      tags:
+      - Electricity
+components:
+  schemas:
+    RouteResponse:
+      type: object
+      additionalProperties: true
+      properties:
+        response:
+          type: object
+          additionalProperties: true
+        request:
+          type: object
+          additionalProperties: true
+        apiVersion:
+          type: string
+    DataResponse:
+      type: object
+      additionalProperties: true
+      properties:
+        response:
+          type: object
+          additionalProperties: true
+          properties:
+            total:
+              type: integer
+            data:
+              type: array
+              items:
+                type: object
+                additionalProperties: true
+        request:
+          type: object
+          additionalProperties: true
+        apiVersion:
+          type: string
+  parameters:
+    Offset:
+      name: offset
+      in: query
+      schema:
+        type: integer
+      description: Pagination offset.
+    End:
+      name: end
+      in: query
+      schema:
+        type: string
+      description: Period end (inclusive).
+    Frequency:
+      name: frequency
+      in: query
+      schema:
+        type: string
+      description: Period frequency (e.g., monthly, quarterly, annual).
+    Length:
+      name: length
+      in: query
+      schema:
+        type: integer
+      description: Maximum rows to return.
+    Start:
+      name: start
+      in: query
+      schema:
+        type: string
+      description: Period start (inclusive).
+    ApiKey:
+      name: api_key
+      in: query
+      required: true
+      schema:
+        type: string
+      description: EIA Open Data API key.
+  securitySchemes:
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+x-generated-from: https://www.eia.gov/opendata/documentation.php
+x-generated-by: claude-crawl-2026-05-08
