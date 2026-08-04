@@ -1,0 +1,38 @@
+{
+  "provider": "department-of-energy",
+  "sources": [
+    "department-of-energy-aeo-api-openapi.yml",
+    "department-of-energy-co2-emissions-api-openapi.yml",
+    "department-of-energy-coal-api-openapi.yml",
+    "department-of-energy-eia-open-data-api-v2-api-openapi.yml",
+    "department-of-energy-electricity-api-openapi.yml",
+    "department-of-energy-international-api-openapi.yml",
+    "department-of-energy-natural-gas-api-openapi.yml",
+    "department-of-energy-nuclear-outages-api-openapi.yml",
+    "department-of-energy-petroleum-api-openapi.yml",
+    "department-of-energy-seds-api-openapi.yml",
+    "department-of-energy-seriesid-api-openapi.yml",
+    "department-of-energy-steo-api-openapi.yml",
+    "department-of-energy-total-energy-api-openapi.yml"
+  ],
+  "outputs": [
+    "department-of-energy-aeo-api-openapi.yml",
+    "department-of-energy-co2-emissions-api-openapi.yml",
+    "department-of-energy-coal-api-openapi.yml",
+    "department-of-energy-eia-open-data-api-v2-api-openapi.yml",
+    "department-of-energy-electricity-api-openapi.yml",
+    "department-of-energy-international-api-openapi.yml",
+    "department-of-energy-natural-gas-api-openapi.yml",
+    "department-of-energy-nuclear-outages-api-openapi.yml",
+    "department-of-energy-petroleum-api-openapi.yml",
+    "department-of-energy-seds-api-openapi.yml",
+    "department-of-energy-seriesid-api-openapi.yml",
+    "department-of-energy-steo-api-openapi.yml",
+    "department-of-energy-total-energy-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

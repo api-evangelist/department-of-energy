@@ -1,0 +1,301 @@
+openapi: 3.1.0
+info:
+  title: EIA Open Data API V2
+  description: >-
+    The U.S. Energy Information Administration (EIA) Open Data API v2 is a
+    fully RESTful implementation of EIA's public energy statistics. Routes
+    are arranged in a logical hierarchy across petroleum, natural gas, coal,
+    electricity, nuclear, renewables, total energy, international, and
+    consumption series.
+  version: "2.0"
+x-generated-from: https://www.eia.gov/opendata/documentation.php
+x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: https://api.eia.gov/v2
+    description: EIA Open Data API v2
+security:
+  - apiKeyQuery: []
+paths:
+  /:
+    get:
+      summary: API root
+      description: Returns metadata about the available top-level routes.
+      operationId: getRoot
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+  /electricity:
+    get:
+      summary: Electricity dataset metadata
+      description: Returns metadata for electricity sub-routes.
+      operationId: getElectricity
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+  /electricity/retail-sales/data:
+    get:
+      summary: Electricity retail sales data
+      description: Returns electricity retail sales data points.
+      operationId: getElectricityRetailSalesData
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+        - $ref: '#/components/parameters/Frequency'
+        - $ref: '#/components/parameters/Start'
+        - $ref: '#/components/parameters/End'
+        - $ref: '#/components/parameters/Offset'
+        - $ref: '#/components/parameters/Length'
+      responses:
+        '200':
+          description: Successful data response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataResponse'
+  /petroleum:
+    get:
+      summary: Petroleum dataset metadata
+      description: Returns metadata for petroleum sub-routes.
+      operationId: getPetroleum
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+  /natural-gas:
+    get:
+      summary: Natural gas dataset metadata
+      description: Returns metadata for natural gas sub-routes.
+      operationId: getNaturalGas
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+  /coal:
+    get:
+      summary: Coal dataset metadata
+      description: Returns metadata for coal sub-routes.
+      operationId: getCoal
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+  /nuclear-outages:
+    get:
+      summary: Nuclear outages dataset metadata
+      description: Returns metadata for nuclear outage sub-routes.
+      operationId: getNuclearOutages
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+  /total-energy:
+    get:
+      summary: Total energy dataset metadata
+      description: Returns metadata for total energy sub-routes.
+      operationId: getTotalEnergy
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+  /international:
+    get:
+      summary: International dataset metadata
+      description: Returns metadata for international sub-routes.
+      operationId: getInternational
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+  /seds:
+    get:
+      summary: State Energy Data System metadata
+      description: Returns metadata for SEDS sub-routes.
+      operationId: getSeds
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+  /steo:
+    get:
+      summary: Short-Term Energy Outlook metadata
+      description: Returns metadata for STEO sub-routes.
+      operationId: getSteo
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+  /aeo:
+    get:
+      summary: Annual Energy Outlook metadata
+      description: Returns metadata for AEO sub-routes.
+      operationId: getAeo
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+  /co2-emissions:
+    get:
+      summary: Energy-related CO2 emissions metadata
+      description: Returns metadata for CO2 emissions sub-routes.
+      operationId: getCo2Emissions
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouteResponse'
+  /seriesid/{seriesId}:
+    get:
+      summary: Legacy series ID lookup
+      description: Returns data for a legacy APIv1 series identifier.
+      operationId: getSeriesById
+      parameters:
+        - $ref: '#/components/parameters/ApiKey'
+        - name: seriesId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataResponse'
+components:
+  securitySchemes:
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+  parameters:
+    ApiKey:
+      name: api_key
+      in: query
+      required: true
+      schema:
+        type: string
+      description: EIA Open Data API key.
+    Frequency:
+      name: frequency
+      in: query
+      schema:
+        type: string
+      description: Period frequency (e.g., monthly, quarterly, annual).
+    Start:
+      name: start
+      in: query
+      schema:
+        type: string
+      description: Period start (inclusive).
+    End:
+      name: end
+      in: query
+      schema:
+        type: string
+      description: Period end (inclusive).
+    Offset:
+      name: offset
+      in: query
+      schema:
+        type: integer
+      description: Pagination offset.
+    Length:
+      name: length
+      in: query
+      schema:
+        type: integer
+      description: Maximum rows to return.
+  schemas:
+    RouteResponse:
+      type: object
+      additionalProperties: true
+      properties:
+        response:
+          type: object
+          additionalProperties: true
+        request:
+          type: object
+          additionalProperties: true
+        apiVersion:
+          type: string
+    DataResponse:
+      type: object
+      additionalProperties: true
+      properties:
+        response:
+          type: object
+          additionalProperties: true
+          properties:
+            total:
+              type: integer
+            data:
+              type: array
+              items:
+                type: object
+                additionalProperties: true
+        request:
+          type: object
+          additionalProperties: true
+        apiVersion:
+          type: string
