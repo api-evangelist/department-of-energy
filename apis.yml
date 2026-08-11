@@ -462,8 +462,6 @@ common:
     url: json-ld/department-of-energy-context.jsonld
   - type: Vocabulary
     url: vocabulary/department-of-energy-vocabulary.yml
-  - type: Capabilities
-    url: capabilities/department-of-energy-capabilities.yml
   - url: https://www.energy.gov/rss.xml
     type: Blog
 maintainers:
