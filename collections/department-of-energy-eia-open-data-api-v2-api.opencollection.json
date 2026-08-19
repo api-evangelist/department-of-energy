@@ -1,0 +1,45 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Aeo EIA Open Data API V2 API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "EIA Open Data API V2",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "API root",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.eia.gov/v2/",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query",
+                "description": "EIA Open Data API key."
+              }
+            ]
+          },
+          "docs": "Returns metadata about the available top-level routes."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

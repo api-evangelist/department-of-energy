@@ -1,0 +1,135 @@
+{
+  "item": [
+    {
+      "id": "91d2a541-1572-4f3c-9096-42a999b38b64",
+      "name": "Nuclear Outages",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "05b47226-ad50-4fb0-9f35-d1d5882ae883",
+          "name": "Nuclear outages dataset metadata",
+          "request": {
+            "name": "Nuclear outages dataset metadata",
+            "description": {
+              "content": "Returns metadata for nuclear outage sub-routes.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "nuclear-outages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "<string>",
+                  "description": "(Required) EIA Open Data API key."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6e393733-cd31-44e3-a8b5-3916f449a34c",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "nuclear-outages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"response\": {\n    \"key_0\": 6587.332700420135,\n    \"key_1\": 9250.180247872639\n  },\n  \"request\": {\n    \"key_0\": \"string\"\n  },\n  \"apiVersion\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.eia.gov/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "fd34fb1f-ea10-4511-aa26-4d3d37a6a474",
+    "name": "EIA Open Data API V2 Aeo Nuclear Outages API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The U.S. Energy Information Administration (EIA) Open Data API v2 is a fully RESTful implementation of EIA's public energy statistics. Routes are arranged in a logical hierarchy across petroleum, natural gas, coal, electricity, nuclear, renewables, total energy, international, and consumption series.",
+      "type": "text/plain"
+    }
+  }
+}

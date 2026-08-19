@@ -1,0 +1,45 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "EIA Open Data API V2 Aeo Nuclear Outages API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Nuclear Outages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Nuclear outages dataset metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.eia.gov/v2/nuclear-outages",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query",
+                "description": "EIA Open Data API key."
+              }
+            ]
+          },
+          "docs": "Returns metadata for nuclear outage sub-routes."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

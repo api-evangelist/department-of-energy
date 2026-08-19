@@ -1,0 +1,153 @@
+{
+  "item": [
+    {
+      "id": "09b25367-cfe9-4eef-90c1-f7ddf739e16f",
+      "name": "Seriesid",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cc4abfea-d5a0-4cda-b4b8-79161d317938",
+          "name": "Legacy series ID lookup",
+          "request": {
+            "name": "Legacy series ID lookup",
+            "description": {
+              "content": "Returns data for a legacy APIv1 series identifier.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "seriesid",
+                ":seriesId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "<string>",
+                  "description": "(Required) EIA Open Data API key."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "seriesId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "08898cec-8203-4b8b-b276-1d8b083b0b9d",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "seriesid",
+                    ":seriesId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "seriesId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"response\": {\n    \"total\": 844,\n    \"data\": [\n      {\n        \"key_0\": false\n      },\n      {\n        \"key_0\": \"string\",\n        \"key_1\": true\n      }\n    ],\n    \"key_0\": \"string\"\n  },\n  \"request\": {\n    \"key_0\": 6167,\n    \"key_1\": 9085.734549251327\n  },\n  \"apiVersion\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.eia.gov/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "4e9c178f-25fe-4802-9b44-7c1e8d8539e5",
+    "name": "EIA Open Data API V2 Aeo Seriesid API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The U.S. Energy Information Administration (EIA) Open Data API v2 is a fully RESTful implementation of EIA's public energy statistics. Routes are arranged in a logical hierarchy across petroleum, natural gas, coal, electricity, nuclear, renewables, total energy, international, and consumption series.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "item": [
+    {
+      "id": "accdb40f-9e6b-43dc-a49f-2f7af72484f1",
+      "name": "Seds",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d4acc2eb-f973-4782-8940-5ba1c827070a",
+          "name": "State Energy Data System metadata",
+          "request": {
+            "name": "State Energy Data System metadata",
+            "description": {
+              "content": "Returns metadata for SEDS sub-routes.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "seds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "<string>",
+                  "description": "(Required) EIA Open Data API key."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "be2e6b1a-bb3e-4b2d-8606-4b37d746f64f",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "seds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"response\": {\n    \"key_0\": \"string\",\n    \"key_1\": 1233.9827606869535\n  },\n  \"request\": {\n    \"key_0\": 5880,\n    \"key_1\": 9619\n  },\n  \"apiVersion\": \"string\",\n  \"key_0\": 7334,\n  \"key_1\": \"string\",\n  \"key_2\": 5690.97573837115,\n  \"key_3\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.eia.gov/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "346d2b47-a2d4-473f-a2a4-5c514bccea67",
+    "name": "EIA Open Data API V2 Aeo Seds API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The U.S. Energy Information Administration (EIA) Open Data API v2 is a fully RESTful implementation of EIA's public energy statistics. Routes are arranged in a logical hierarchy across petroleum, natural gas, coal, electricity, nuclear, renewables, total energy, international, and consumption series.",
+      "type": "text/plain"
+    }
+  }
+}

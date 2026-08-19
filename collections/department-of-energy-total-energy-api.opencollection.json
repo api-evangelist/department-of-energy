@@ -1,0 +1,45 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "EIA Open Data API V2 Aeo Total Energy API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Total Energy",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Total energy dataset metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.eia.gov/v2/total-energy",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query",
+                "description": "EIA Open Data API key."
+              }
+            ]
+          },
+          "docs": "Returns metadata for total energy sub-routes."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

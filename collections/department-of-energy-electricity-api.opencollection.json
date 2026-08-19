@@ -1,0 +1,94 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "EIA Open Data API V2 Aeo Electricity API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Electricity",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Electricity dataset metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.eia.gov/v2/electricity",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query",
+                "description": "EIA Open Data API key."
+              }
+            ]
+          },
+          "docs": "Returns metadata for electricity sub-routes."
+        },
+        {
+          "info": {
+            "name": "Electricity retail sales data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.eia.gov/v2/electricity/retail-sales/data",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query",
+                "description": "EIA Open Data API key."
+              },
+              {
+                "name": "frequency",
+                "value": "",
+                "type": "query",
+                "description": "Period frequency (e.g., monthly, quarterly, annual)."
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query",
+                "description": "Period start (inclusive)."
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query",
+                "description": "Period end (inclusive)."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset."
+              },
+              {
+                "name": "length",
+                "value": "",
+                "type": "query",
+                "description": "Maximum rows to return."
+              }
+            ]
+          },
+          "docs": "Returns electricity retail sales data points."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
