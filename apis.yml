@@ -25,6 +25,16 @@ tags:
   - Buildings
   - Electricity
   - Energy
+  - Federal-Government
+  - Open Data
+  - Renewables
+  - Research
+  - Solar
+  - Statistics
+tags_raw:
+  - Buildings
+  - Electricity
+  - Energy
   - Federal Government
   - Open Data
   - Renewables
@@ -170,6 +180,8 @@ apis:
   humanURL: https://www.eia.gov/opendata/
   baseURL: https://api.eia.gov/v2
   tags:
+  - AEO
+  tags_raw:
   - Aeo
   properties:
   - type: OpenAPI
@@ -190,6 +202,8 @@ apis:
   humanURL: https://www.eia.gov/opendata/
   baseURL: https://api.eia.gov/v2
   tags:
+  - CO2 Emissions
+  tags_raw:
   - Co2 Emissions
   properties:
   - type: OpenAPI
@@ -351,6 +365,8 @@ apis:
   humanURL: https://www.eia.gov/opendata/
   baseURL: https://api.eia.gov/v2
   tags:
+  - SEDS
+  tags_raw:
   - Seds
   properties:
   - type: OpenAPI
@@ -391,6 +407,8 @@ apis:
   humanURL: https://www.eia.gov/opendata/
   baseURL: https://api.eia.gov/v2
   tags:
+  - STEO
+  tags_raw:
   - Steo
   properties:
   - type: OpenAPI
