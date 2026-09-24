@@ -33,6 +33,21 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
+  "notes": [
+    "department-of-energy-aeo-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "department-of-energy-co2-emissions-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "department-of-energy-coal-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "department-of-energy-eia-open-data-api-v2-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "department-of-energy-electricity-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "department-of-energy-international-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "department-of-energy-natural-gas-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "department-of-energy-nuclear-outages-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "department-of-energy-petroleum-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "department-of-energy-seds-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "department-of-energy-seriesid-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "department-of-energy-steo-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "department-of-energy-total-energy-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
   "skipped": []
 }

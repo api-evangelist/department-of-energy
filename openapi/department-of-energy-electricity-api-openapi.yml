@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: EIA Open Data API V2 Aeo Electricity API
   description: The U.S. Energy Information Administration (EIA) Open Data API v2 is a fully RESTful implementation of EIA's public energy statistics. Routes are arranged in a logical hierarchy across petroleum, natural gas, coal, electricity, nuclear, renewables, total energy, international, and consumption series.
@@ -49,6 +49,44 @@ paths:
       tags:
       - Electricity
 components:
+  parameters:
+    End:
+      name: end
+      in: query
+      schema:
+        type: string
+      description: Period end (inclusive).
+    ApiKey:
+      name: api_key
+      in: query
+      required: true
+      schema:
+        type: string
+      description: EIA Open Data API key.
+    Start:
+      name: start
+      in: query
+      schema:
+        type: string
+      description: Period start (inclusive).
+    Offset:
+      name: offset
+      in: query
+      schema:
+        type: integer
+      description: Pagination offset.
+    Length:
+      name: length
+      in: query
+      schema:
+        type: integer
+      description: Maximum rows to return.
+    Frequency:
+      name: frequency
+      in: query
+      schema:
+        type: string
+      description: Period frequency (e.g., monthly, quarterly, annual).
   schemas:
     RouteResponse:
       type: object
@@ -82,44 +120,6 @@ components:
           additionalProperties: true
         apiVersion:
           type: string
-  parameters:
-    Offset:
-      name: offset
-      in: query
-      schema:
-        type: integer
-      description: Pagination offset.
-    End:
-      name: end
-      in: query
-      schema:
-        type: string
-      description: Period end (inclusive).
-    Frequency:
-      name: frequency
-      in: query
-      schema:
-        type: string
-      description: Period frequency (e.g., monthly, quarterly, annual).
-    Length:
-      name: length
-      in: query
-      schema:
-        type: integer
-      description: Maximum rows to return.
-    Start:
-      name: start
-      in: query
-      schema:
-        type: string
-      description: Period start (inclusive).
-    ApiKey:
-      name: api_key
-      in: query
-      required: true
-      schema:
-        type: string
-      description: EIA Open Data API key.
   securitySchemes:
     apiKeyQuery:
       type: apiKey
